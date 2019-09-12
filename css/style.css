@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #f6f6f6;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border: none;
+}
+
+input, button {
+    outline: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 100vh;
+    overflow: auto;
+}
+
+.head-blocks {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+}
+
+.head-block1 {
+    width: 62%;
+    height: inherit;
+    position: relative;
+    z-index: -1;
+}
+
+.head-block1 img:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    transform: rotate(180deg);
+}
+
+.head-block1 img:nth-child(2){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+}
+
+.head-block2 {
+    flex: 1;
+    height: inherit;
+    background: #176aa5;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.left-nav {
+    width: 62%;
+}
+
+.nav-links {
+    list-style: none;
+    font-size: 13px;
+}
+
+.left-nav img:last-child {
+    width: 1vw;
+    vertical-align: middle;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    text-align: left;
+    margin: 0 5px;
+}
+
+.main-titles {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    padding: 100px 0;
+}
+
+main > div {
+    padding: 30px 0;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 12px;
+    background: #176aa5;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12);
+}
+
+.card-block {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-cards {
+    height: auto;
+    background: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12);
+}
+
+.main-cards:first-of-type {
+    margin-left: 0;
+}
+
+.main-cards:last-child {
+    margin-right: 0;
+}
+
+.card-img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    height: 130px;
+}
+
+.main-cards:first-of-type .card-img {
+    background: url('C:/Users/Мой компьютер/Desktop/Senat/img/meropriyatita1.png') no-repeat center center / cover;
+}
+
+.main-cards:nth-child(2) .card-img {
+    background: url('C:/Users/Мой компьютер/Desktop/Senat/img/meropriyatita2.png') no-repeat center center / cover;
+}
+
+.main-cards:nth-child(3) .card-img {
+    background: url('C:/Users/Мой компьютер/Desktop/Senat/img/meropriyatita3.png') no-repeat center center / cover;
+}
+
+.main-cards:last-child .card-img {
+    background: url('C:/Users/Мой компьютер/Desktop/Senat/img/meropriyatita4.png') no-repeat center center / cover;
+}
+
+.main-card2 {
+    background: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12);
+}
+
+.main-card2:first-of-type {
+    margin-left: 0;
+}
+
+.main-card2:last-child {
+    margin-right: 0;
+}
+
+.card3-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-card3 {
+    height: auto;
+    background: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12);
+}
+
+.main-card3 .card-img {
+    height: 130px;
+}
+
+.main-card3:first-child .card-img {
+    background: url('C:/Users/Мой компьютер/Desktop/Senat/img/senat1.png') no-repeat center center / cover;
+}
+
+.main-card3:nth-child(2) .card-img {
+    background: url('C:/Users/Мой компьютер/Desktop/Senat/img/senat2.png') no-repeat center center / cover;
+}
+
+.card3-day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    background: #176aa5;
+    color: white;
+    font-size: 12px;
+    margin-right: -15px;
+    margin-top: -50%;
+}
+
+.card3-day span {
+    font-size: 15px;
+}
+
+.card3-event {
+    width: 30%;
+    background: white;
+    padding: 10px;
+}
+
+.event {
+    padding: 10px 0;
+}
+
+.card3-day hr {
+    font-size: 20px;
+}
