@@ -32,7 +32,7 @@ ul, li {
 
 header {
     height: 942px;
-    overflow: auto;
+    margin-bottom: 150px;
 }
 
 .head-blocks {
@@ -44,8 +44,7 @@ header {
 }
 
 .head-block1 {
-    width: auto;
-    max-width: 1440px;
+    width: 1170px;
     height: inherit;
     position: relative;
     flex: 2;
@@ -87,17 +86,74 @@ nav {
 }
 
 .left-nav {
-    width: 62%;
+    width: 899px;
 }
+
+.right-nav {
+    width: 450px;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: #176aa5;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}  
+.dropdown-content a:hover {
+    background-color: white;
+    color: #176aa5;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
 
 .nav-links {
     list-style: none;
     font-size: 13px;
 }
 
-.left-nav img:last-child {
-    width: 1vw;
+.nav-links svg {
+    height: 20px;
+    width: auto;
     vertical-align: middle;
+}
+
+.left-nav img {
+    width: 60px;
+    vertical-align: middle;
+}
+
+.nav-btn {
+    cursor: pointer;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 12px;
+    background: white;
+    color: #176aa5;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12);
 }
 
 .logo {
@@ -109,6 +165,88 @@ nav {
 .logo span {
     text-align: left;
     margin: 0 5px;
+}
+
+.header-carusel {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.header-content p {
+    padding: 12.5px 0;
+}
+
+.header-content a {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+header .title-row {
+    padding: 55px 0;
+    margin-top: 50px;
+}
+header .title-row .left-title p:first-child {
+    padding-right: 60px;
+}
+
+.social-btn {
+    display: block;
+    border-radius: 50%;
+}
+
+.social-btn svg {
+    width: 25px;
+    height: 25px;
+    background: #176aa5;
+}
+
+.svg-fill-blue path{
+    fill: #176aa5;
+    width: 20px;
+    height: auto;
+}
+
+.svg-fill-white path{
+    fill: white;
+    width: 20px;
+    height: auto;
+}
+
+.icons {
+    margin-right: 10px;
+}
+
+.social-btn svg * {
+    fill: white;
+}
+
+.right-title > a {
+    padding-left: 10px;
+}
+
+.header-content .caru-btn-div {
+    padding-top: 115px;
+}
+
+.conference {
+    margin-bottom: 140px;
+}
+
+.publication {
+    margin-bottom: 125px;
+}
+
+.senat-meeting {
+    margin-bottom: 150px;
+}
+
+.mediatecy {
+    margin-bottom: 145px;
+}
+
+.useful-links {
+    margin-bottom: 70px;
 }
 
 .main-titles {
@@ -243,16 +381,21 @@ nav {
 .left-title {
     flex: 1;
     display: flex;
-    align-items: baseline;
+    align-items: center;
 }
 
 .left-title a {
     padding: 0 30px;
 }
 
+.right-title{
+    display: flex;
+}
+
 .media-carousel {
     display: flex;
     align-items: baseline;
+    margin-top: 30px;
 }
 
 .dashed {
@@ -285,8 +428,15 @@ nav {
 
 .caru-btn-div {
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.caru-btn-div .carusel-btn:first-of-type {
+    margin-right: 10px;
+}
+
+.caru-btn-div .carusel-btn:last-of-type {
+    margin-left: 10px;
 }
 
 .circle {
@@ -307,10 +457,19 @@ nav {
     border-radius: 50%;
     background: white;
     padding: 5px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.12);
 }
 
-.carusel-btn {
-    color: #176aa5;
+.carusel-btn svg{
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.caru-btn-div .circle {
+    margin: 0 10px;
 }
 
 .useful-links .main-cards {
@@ -337,4 +496,5 @@ footer .container {
 
 .footer-details *{
     padding: 10px 0;
+    color: white;
 }
