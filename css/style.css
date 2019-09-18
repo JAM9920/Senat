@@ -21,7 +21,8 @@
 }
 
 html {
-    background: #f6f6f6;;
+    background: #f6f6f6;
+    font-size: 100%;
 }
 
 a {
@@ -46,6 +47,7 @@ ul, li {
 .container {
     max-width: 1440px;
     margin: auto;
+    position: relative;
 }
 
 header {
@@ -92,7 +94,7 @@ nav {
     display: flex;
     padding: 30px 0 0 0;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 nav *{
@@ -108,15 +110,16 @@ nav *{
 }
 
 .left-nav {
-    width: 915px;
+    flex: 1;
 }
+
 
 .left-nav li:last-child {
     margin-right: 40px;
 }
 
 .right-nav {
-    width: 495px;
+    flex: 1;
 }
 
 
@@ -129,6 +132,7 @@ nav *{
     color: white;
     border: none;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .dropdown {
@@ -160,8 +164,27 @@ nav *{
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.links {
+    display: flex;
+    width: 100%;
+}
+
 .nav-links {
     list-style: none;
+    display: block;
+    text-align: center;
+}
+
+nav .logo {
+    flex: 1;
+}
+
+nav .links {
+    flex: 3;
+}
+
+header .caru-btn-div  svg{
+    vertical-align: middle;
 }
 
 .nav-links svg {
@@ -215,7 +238,14 @@ svg {
 .header-carusel {
     padding-top: 100px;
     display: flex;
-    align-items: center;
+    position: relative;
+}
+
+header .container .caru-btn-div {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 65px;
+    z-index: 1;
 }
 
 .head-caru-img {
@@ -225,6 +255,7 @@ svg {
 }
 
 .header-content {
+    margin-top: 80px;
     max-width: 670px;
     flex: 1;
 }
@@ -308,10 +339,6 @@ header .title-row .date-year p:first-of-type {
     margin-left: 15px;
 }
 
-.header-content .caru-btn-div {
-    padding-top: 115px;
-}
-
 .conference {
     margin-bottom: 140px;
 }
@@ -322,6 +349,10 @@ header .title-row .date-year p:first-of-type {
 
 .senat-meeting {
     margin-bottom: 150px;
+}
+
+.senat-meeting .card-block2 .main-titles {
+    display: none;
 }
 
 .mediatecy {
@@ -381,7 +412,7 @@ header .title-row .date-year p:first-of-type {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
 .card-context {
@@ -451,7 +482,6 @@ header .title-row .date-year p:first-of-type {
 }
 
 .card-detail {
-    max-height: 190px;
     padding: 25px 20px;
     position: relative;
 }
@@ -475,7 +505,7 @@ header .title-row .date-year p:first-of-type {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    max-height: 410px;
+    max-height: 500px;
 }
 
 .main-card3 {
@@ -501,7 +531,7 @@ header .title-row .date-year p:first-of-type {
 }
 
 .card3-event {
-    width: 30%;
+    width: 440px;
     max-height: inherit;
     background: white;
     border-radius: 5px;
@@ -521,7 +551,7 @@ header .title-row .date-year p:first-of-type {
 .card-block22 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
 .left-title {
@@ -545,38 +575,42 @@ header .title-row .date-year p:first-of-type {
     margin: auto;
     margin-top: 30px;
     max-width: 1920px;
-}
-
-.shaded {
-    width: 180px;
-    height: 220px;
-    background: #176aa5;
     position: relative;
 }
 
-.shaded:last-child {
+.shaded {
+    width: 145px;
+    height: 220px;
+    background: white;
+    opacity: .7;
+    position: absolute;
+    z-index: 2;
+}
+
+.shaded:last-of-type {
     margin-left: 5px;
+    right: 0;
 }
 
 .shaded:first-child {
     margin-right: 5px;
-}
-
-.shaded .carusel-btn {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
+    left: 0;
 }
 
 .caru-img {
+    position: relative;
     height: 220px;
     margin: 0 5px;
     background: white;
     flex: 0 0 300px;
     box-shadow: 0 0 30px rgba(0,0,0,.12);
+}
+
+.caru-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .caru-circles {
@@ -696,7 +730,7 @@ footer .logo {
     width: auto;
 }
 
-.owl-prev, .owl-next {
+button.owl-prev, button.owl-next {
     border-radius: 50%;
     background: white;
     padding: 5px;
@@ -704,6 +738,10 @@ footer .logo {
     height: 40px;
     box-shadow: 0 3px 6px rgba(0,0,0,.12);
     cursor: pointer;
+}
+
+.owl-prev svg, .owl-next {
+    vertical-align: middle;
 }
 
 .owl-prev {
@@ -722,10 +760,352 @@ footer .logo {
     -moz-border-radius: 25px;
     border-radius: 50%;
     background: white;
-    border: 1px #176aa5 solid;
+    border: 1px white solid;
     margin: 0 10px;
 }
 
 button.active {
     background: #176aa5;
 }
+
+.owl-carousel .owl-item {
+    transform: none;
+}
+.owl-carousel .owl-stage-outer {
+    transform: none;
+}
+
+.media-carousel button svg {
+    vertical-align: middle;
+}
+
+.media-carousel .owl-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: 55px;
+    z-index: 3;
+}
+
+.media-carousel .owl-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 55px;
+    z-index: 3;
+}
+
+.owl-item.actives .item:last-of-type {
+    width: 154px;
+    height: 220px;
+    background: white;
+    opacity: .5;
+    z-index: 2;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    header {
+        height: auto;
+        background: #176aa5;
+    }
+    header nav.container {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px 30px 20px;
+    }
+    .header-content {
+        margin-top: 0px;
+    }
+    header .container .caru-btn-div {
+        margin-bottom: 0;
+        position: relative;
+        margin-top: 20px;
+    }
+    nav, .links, .left-nav, .right-nav {
+        display: block;
+    }
+    nav {
+        background: white;
+    }
+    header .title-row {
+        display: block;
+    }
+    header .right-title {
+        justify-content: center;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    header a.btn.shrift-16 {
+        display: block;
+        width: 50%;
+        margin: auto;
+        background: white;
+        color: #176aa5;
+    }
+    header .svg-fill-blue path {
+        fill: white;
+        width: 20px;
+        height: auto;
+    }
+    .head-block1 {
+        display: none;
+    }
+    .links li{
+        display: none;
+    }
+    .links li.nav-toggle-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50px;
+    }
+    .links.responsive .nav-toggle-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        top: 50px;
+    }
+    .links.responsive li {
+        height: 40px;
+        border-top: 1px solid black;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-carusel {
+        flex-direction: column-reverse;
+    }
+    .links.responsive svg path{
+        fill: black;
+    }
+    .owl-carousel .owl-item img.head-caru-img {
+        width: auto;
+    }
+    header .title-row {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container { 
+        max-width: 850px;
+    }
+    .header-carusel .header-content {
+        margin: auto;
+        text-align: center;
+    }
+    header .container .caru-btn-div {
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    header .date-year {
+        justify-content: center;
+    }
+    header .date.date-year p{
+        color: white;
+    }
+    .owl-carousel .owl-item img.head-caru-img {
+        width: 600px;
+        margin: auto;
+    }
+    .card3-div:first-child {
+        margin-right: 0;
+    }
+    .card-block2 {
+        flex-wrap: wrap;
+        display: block;
+    }
+    .card3-event {
+        margin: auto;
+        margin-top: 40px;
+        display: block;
+    }
+    
+    .senat-meeting .title-row .toggle-title {
+        display: none;
+    }
+    .senat-meeting .card-block2 .main-titles {
+        display: block;
+        text-align: center;
+        margin-top: 20px
+    }
+    footer .container {
+        display: block;
+    }
+    footer > .container > .footer-details {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-details * {
+        margin: auto;
+    }
+    .logo span {
+        margin: auto;
+        margin-left: 0;
+    }
+    footer .logo img {
+        margin-right: 5px;
+    }
+    .date-year i.icons {
+        margin-right: 20px;
+    }
+    .footer-details p {
+        padding: 10px 0;
+        margin-left: 0;
+    }
+    .card-block {
+        flex-wrap: wrap;
+    }
+    .main-cards {
+        width: 320px;
+    }
+    .main-cards.bottom {
+        margin-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 860px) {
+    main > div {
+        margin-bottom: 50px;
+    }
+    .container {
+        max-width: 700px;
+    }
+    .header-content {
+        margin-top: 0;
+    }
+    
+    .header-content .shrift-16{
+        font-size: 10px;
+    }
+    .header-content .shrift-28 {
+        font-size: 17px;
+    }
+    .senat-meeting .title-row .toggle-title {
+        display: none;
+    }
+    .senat-meeting .title-row {
+        display: block;
+    }
+    .senat-meeting .title-row  .main-titles {
+        text-align: center;
+    }
+    .senat-meeting .card-block2 .main-titles {
+        display: block;
+        text-align: center;
+        margin-top: 20px
+    }
+    .card-block {
+        flex-wrap: wrap;
+    }
+    .main-cards {
+        width: 320px;
+    }
+    .main-cards.bottom {
+        margin-top: 40px;
+    }
+    .card-block {
+        display: block;
+    }
+    .main-cards {
+        margin: auto;
+        margin-top: 40px;
+    }
+    .main-card2:first-of-type, .conference .main-cards:first-of-type {
+        margin-left: auto;
+    }
+    .main-card2:last-of-type, .conference .main-cards:last-of-type {
+        margin-right: auto;
+    }
+    .mediatecy .title-row {
+        display: block;
+    }
+    .mediatecy .title-row .left-title {
+        justify-content: center;
+    }
+    .mediatecy .title-row .btn {
+        margin: auto;
+        display: block;
+        width: 50%;
+        margin-top: 20px;s
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: auto;
+    }
+    .owl-dot {
+        margin: 0 4px;
+    }
+    .title-row {
+        text-align: center;
+        display: block;
+        justify-content: space-between;
+    }
+    .useful-links .caru-btn-div {
+        justify-content: space-around;
+    }
+    .shaded {
+        display: none;
+    }
+    .media-carousel .owl-prev {
+        margin-left: 10px;
+    }
+    .media-carousel .owl-next {
+        margin-right: 10px;
+    }
+    .mediatecy .main-titles {
+        margin-right: 0;
+    }
+    .mediatecy .left-title {
+        display: block;
+    }
+    .mediatecy .title-row *, .publication .title-row *, .conference .title-row *{
+        display: block;
+        margin-top: 20px;
+    }
+    .card-block2 {
+        max-height: none;
+    }
+    .card-block22 {
+        display: block;
+    }
+    .card3-event {
+        margin: 40px 10px 0 10px;
+        display: block;
+        width: auto;
+    }
+    .card-block22 .card3-div {
+        margin: 20px 10px 0 10px;
+    }
+    .card-block {
+        display: block;
+    }
+    .main-cards {
+        margin-top: 40px;
+    }
+    .main-cards {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        width: auto;
+    }
+    .card3-div {
+        display: block;
+    }
+    .card3-day {
+        margin-top: 0;
+    }
+    .mediatecy .title-row .btn {
+        width: 100%;
+    }
+}
+
