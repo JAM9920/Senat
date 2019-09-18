@@ -48,7 +48,7 @@ $('.owl-carousel-links').owlCarousel({
         0:{
             items:1
         },
-        600: {
+        500: {
             items: 2
         },
         900: {
@@ -109,6 +109,9 @@ $('.owl-carousel-links').owlCarousel({
         responsive:{
             200:{
                 items:1
+            },
+            500: {
+                items:2
             },
             800:{
                 items:3

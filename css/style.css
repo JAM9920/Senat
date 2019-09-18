@@ -25,6 +25,11 @@ html {
     font-size: 100%;
 }
 
+body {
+    max-width: 1920px;
+    margin: auto;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -53,12 +58,14 @@ ul, li {
 header {
     height: 942px;
     margin-bottom: 150px;
+    max-width: 1920px;
 }
 
 .head-blocks {
     display: flex;
     position: absolute;
     width: 100%;
+    max-width: 1920px;
     height: inherit;
     z-index: -1;
 }
@@ -66,7 +73,7 @@ header {
 .head-block1 {
     height: inherit;
     position: relative;
-    flex: 1.56;
+    flex: 1;
     z-index: -1;
 }
 
@@ -84,7 +91,7 @@ header {
 }
 
 .head-block2 {
-    flex: 1;
+    flex: 0.65;
     height: inherit;
     background: #176aa5;
     z-index: -1;
@@ -94,7 +101,6 @@ nav {
     display: flex;
     padding: 30px 0 0 0;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 nav *{
@@ -110,7 +116,7 @@ nav *{
 }
 
 .left-nav {
-    flex: 1;
+    width: 54%;
 }
 
 
@@ -119,7 +125,7 @@ nav *{
 }
 
 .right-nav {
-    flex: 1;
+    width: 48%;
 }
 
 
@@ -147,6 +153,7 @@ nav *{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 10px;
+    transform: translateX(-30%);
 }
 
 .dropdown-content a {
@@ -176,11 +183,11 @@ nav *{
 }
 
 nav .logo {
-    flex: 1;
+    width: 23.5%;
 }
 
 nav .links {
-    flex: 3;
+    width: 76.5%;
 }
 
 header .caru-btn-div  svg{
@@ -195,7 +202,7 @@ header .caru-btn-div  svg{
 
 .date * {
     color: #176aa5;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .date-year {
@@ -216,10 +223,10 @@ svg {
 
 .nav-btn {
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 10px 20px;
     text-align: center;
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 15px;
     background: white;
     color: #176aa5;
     box-shadow: 0 3px 6px rgba(0,0,0,.12);
@@ -531,7 +538,7 @@ header .title-row .date-year p:first-of-type {
 }
 
 .card3-event {
-    width: 440px;
+    width: 22.3%;
     max-height: inherit;
     background: white;
     border-radius: 5px;
@@ -552,6 +559,7 @@ header .title-row .date-year p:first-of-type {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    width: 73%;
 }
 
 .left-title {
@@ -579,7 +587,7 @@ header .title-row .date-year p:first-of-type {
 }
 
 .shaded {
-    width: 145px;
+    width: calc(100%/12,1);
     height: 220px;
     background: white;
     opacity: .7;
@@ -760,7 +768,7 @@ button.owl-prev, button.owl-next {
     -moz-border-radius: 25px;
     border-radius: 50%;
     background: white;
-    border: 1px white solid;
+    border: 1px #176aa5 solid;
     margin: 0 10px;
 }
 
@@ -805,8 +813,41 @@ button.active {
     z-index: 2;
 }
 
+@media only screen and (max-width: 1700px) {
+    header .container .caru-btn-div {
+        margin-bottom: 0;
+    }
+}
+@media only screen and (min-width: 1441px) {
+    .container {
+        width: 75%;
+    }
+    .shaded {
+        width: calc(100%/12)
+    }
+}
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1440px) {
+    .header-content {
+        margin-top: 0;
+    }
+    .container {
+        max-width: 90%;
+    }
+    .shaded {
+        width: calc(100%/8);
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    header .owl-carousel .owl-item img {
+        display: block;
+        width: 55%;
+    }
+}
+
+
+@media only screen and (max-width: 1223px) {
     header {
         height: auto;
         background: #176aa5;
@@ -814,7 +855,7 @@ button.active {
     header nav.container {
         width: 100%;
         max-width: 100%;
-        padding: 30px 20px 30px 20px;
+        padding: 30px 20px 0 20px;
     }
     .header-content {
         margin-top: 0px;
@@ -850,11 +891,32 @@ button.active {
         width: 20px;
         height: auto;
     }
+    .header-content .head-tag {
+        justify-content: center;
+    }
+    .header-content .head-tag .circle{
+        background: white;
+    }
     .head-block1 {
         display: none;
     }
+    nav .logo {
+        padding-bottom: 20px;
+    }
+    nav .links  {
+        width: 100%;
+    }
+    nav .left-nav {
+        width: 100%;
+    }
+    nav .right-nav {
+        width: 100%;
+    }
     .links li{
         display: none;
+    }
+    .links li.dropdown {
+        display: block;
     }
     .links li.nav-toggle-btn {
         display: block;
@@ -865,7 +927,6 @@ button.active {
     .links.responsive .nav-toggle-btn {
         position: absolute;
         right: 0;
-        top: 0;
         top: 50px;
     }
     .links.responsive li {
@@ -874,6 +935,12 @@ button.active {
         float: none;
         display: block;
         text-align: left;
+    }
+    .links.responsive li.nav-toggle-btn, .links.responsive li.dropdown {
+        border: none;
+    }
+    .right-nav li:first-child {
+        margin-left: 0px;
     }
     .header-carusel {
         flex-direction: column-reverse;
@@ -889,7 +956,36 @@ button.active {
     }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1223px) {
+    .dropbtn {
+        color: black;
+    }
+
+    .links li.dropdown {
+        position: absolute;
+        top: 50px;
+        right: 100px;
+        display: inline-block;
+        width: 50px;
+    }
+
+    .dropdown-content a {
+        color: #176aa5;
+        background: white;
+        border-radius: 0;
+    }  
+    .dropdown-content a:hover {
+        color: #176aa5;
+    }
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+    header, .conference, .publication, .mediatecy {
+        margin-bottom: 50px;
+    }
+    header .owl-dot {
+        border: 1px white solid;
+    }
     .container { 
         max-width: 850px;
     }
@@ -914,14 +1010,22 @@ button.active {
     .card3-div:first-child {
         margin-right: 0;
     }
+    .card3-div:last-child {
+        margin-left: 30px;
+    }
     .card-block2 {
         flex-wrap: wrap;
         display: block;
+        height: auto;
+    }
+    .card-block22 {
+        width: 100%;
     }
     .card3-event {
         margin: auto;
         margin-top: 40px;
         display: block;
+        width: 100%;
     }
     
     .senat-meeting .title-row .toggle-title {
@@ -931,6 +1035,9 @@ button.active {
         display: block;
         text-align: center;
         margin-top: 20px
+    }
+    .senat-meeting p.card-context.shrift-14 {
+        line-height: 1.4;
     }
     footer .container {
         display: block;
@@ -967,8 +1074,33 @@ button.active {
     }
 }
 
+@media only screen and (max-width: 1440px) {
+    .shaded {
+        width: calc(100% / 8);
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .shaded {
+        display: none;
+    }
+    .media-carousel {
+        margin: 30px 20px 0 20px;
+    }
+    .media-carousel .owl-prev {
+        margin-left: -20px;
+    }
+    .media-carousel .owl-next {
+        margin-right: -20px;
+    }
+}
 
 @media only screen and (max-width: 860px) {
+    
+    .owl-carousel .owl-item img.head-caru-img {
+        width: calc(100%/1.2);
+        margin: auto;
+    }
     main > div {
         margin-bottom: 50px;
     }
@@ -1031,11 +1163,33 @@ button.active {
         margin: auto;
         display: block;
         width: 50%;
-        margin-top: 20px;s
+        margin-top: 20px;
+    }
+    .media-carousel {
+        margin: 30px 20px 0 20px;
+    }
+    .media-carousel .owl-prev {
+        margin-left: -20px;
+    }
+    .media-carousel .owl-next {
+        margin-right: -20px;
+    }
+    .shaded {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
+    .title-row > .date-year {
+        display: block;
+    }
+    .title-row .date-year .date-year {
+        margin-top: 20px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
     .container {
         max-width: auto;
     }
@@ -1049,6 +1203,7 @@ button.active {
     }
     .useful-links .caru-btn-div {
         justify-content: space-around;
+        margin-top: 30px;
     }
     .shaded {
         display: none;
@@ -1075,6 +1230,9 @@ button.active {
     .card-block22 {
         display: block;
     }
+    .card3-div {
+        margin-left: 0;
+    }
     .card3-event {
         margin: 40px 10px 0 10px;
         display: block;
@@ -1092,6 +1250,9 @@ button.active {
     .main-cards {
         width: 100%;
     }
+    .shaded {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -1106,6 +1267,18 @@ button.active {
     }
     .mediatecy .title-row .btn {
         width: 100%;
+    }
+    .shaded {
+        display: none;
+    }
+    .media-carousel {
+        margin: 30px 20px 0 20px;
+    }
+    .media-carousel .owl-prev {
+        margin-left: -20px;
+    }
+    .media-carousel .owl-next {
+        margin-right: -20px;
     }
 }
 
