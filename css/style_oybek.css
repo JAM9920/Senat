@@ -1,0 +1,199 @@
+@font-face {
+	font-family: 'myriadpro_regular';
+	src: url('../fonts/myriad-pro/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+.container{
+	max-width: 1440px;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+.senat_guide, .senat_guide_more {
+	background-color: #f6f6f6;
+}
+
+.senat_guide_more {
+	height: calc(100vh - 212px);
+	min-height: 1024px;
+}
+
+.bread-crumb {
+	list-style: none;
+	padding: 25px 0px 0;
+}
+
+.bread-crumb li {
+	display: inline;
+	font-size: 14px;
+	font-family: myriadpro_regular;
+}
+
+.bread-crumb li+li:before {
+	padding: 5px;
+	content: "\003e";
+}
+
+.bread-crumb li a {
+	color: black;
+}
+
+.guide_info, .sidebar {
+	background-color: #fff;
+	margin:4px 0 80px;
+	padding: 30px;
+}
+
+.guide_info {
+	min-height: 1030px;
+}
+
+.guide_info h2, .guide_info_more h2 {
+	font-size: 26px;
+	font-family: myriadpro_regular;
+	display: inline;
+}
+
+.guide_info .guide_link {
+	margin-left: 65px;
+	font-size: 16px;
+	font-family: myriadpro_regular;
+}
+
+.guide_info .info_link {
+	margin-left: 30px;
+	font-size: 16px;
+	font-family: myriadpro_regular;
+}
+
+.guide_info .active{
+	border: 1px solid #176aa5;
+	border-radius: 25px;
+	padding: 10px 25px;
+	color: #fff;
+	background-color: #176aa5;
+	font-weight: 350;
+}
+
+.guide_info .guide_p {
+	padding-top: 40px;
+}
+
+.sidebar {
+	min-height: 370px;
+	font-family: myriadpro_regular;
+}
+
+.sidebar h4 {
+	font-size: 24px;
+	color: #176aa5;
+	margin-bottom: 12px;
+}
+
+.sidebar p {
+	font-size: 15px;
+	line-height: 1.3;
+	margin-bottom: 13px;
+}
+
+#sidebar_p {
+	color: #176aa5;
+	font-weight: 500;
+}
+
+.members {
+	padding: 30px 0;
+	font-family: myriadpro_regular;
+}
+
+.members_wrapper {
+	position: relative;
+}
+
+.members .members_name {
+	font-size: 20px;
+	padding: 25px 0 10px;
+}
+
+.members a.read_more {
+	position: absolute;
+	bottom: 30px;
+}
+
+.members a.read_more img {
+	width: 23px;
+	border: 1px solid #176aa5;
+	padding: 4px;
+	border-radius: 50%;
+	background-color: #176aa5;
+	margin-left: 10px;
+}
+
+.guide_info_more {
+	background-color: #fff;
+	margin:4px 0 80px;
+	padding: 30px;
+	min-height: 500px;
+}
+
+.guide_info_more .members_name {
+	color: #176aa5;
+	padding: 0;
+	font-family: myriadpro_regular;
+}
+
+.guide_info_more .about_row {
+	display: flex;
+}
+
+.guide_info_more .about_row h4{
+	font-size: 15px;
+}
+
+.about_row .personal_details {
+	flex: 0 0 33%;
+}
+
+.personal_details h4, .personal_info p {
+	line-height: 24px;
+}
+
+.about_row .personal_info {
+	flex: 0 0 67%;
+	padding-right: 30px;
+}
+
+footer {
+	background-color: #176aa5;
+	color: #fff;
+	font-family: myriadpro_regular;
+}
+
+.footer {
+	padding: 40px 0;
+}
+
+footer .gerb {
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.gerb .gerb_text {
+	margin: 7px 0 0 10px;
+	font-size: 20px;
+}
+
+.contacts h5, .contacts p {
+	margin-bottom: 20px;
+}
+
+.contacts p > img {
+	margin-right: 12px;
+}
+
+.senatuz {
+	padding-left: 23px;
+	margin-bottom: 40px;
+}

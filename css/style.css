@@ -49,7 +49,7 @@ ul, li {
     list-style: none;
 }
 
-.container {
+.container1 {
     max-width: 1440px;
     margin: auto;
     position: relative;
@@ -141,6 +141,10 @@ nav *{
     text-align: center;
 }
 
+.dropbtn.dropbtn-black, .dropbtn.dropbtn-black a {
+    color: black;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -188,6 +192,10 @@ nav .logo {
 
 nav .links {
     width: 76.5%;
+}
+
+nav.nav-other {
+    margin-bottom: 20px;
 }
 
 header .caru-btn-div  svg{
@@ -248,7 +256,7 @@ svg {
     position: relative;
 }
 
-header .container .caru-btn-div {
+header .container1 .caru-btn-div {
     position: absolute;
     bottom: 0;
     margin-bottom: 65px;
@@ -402,6 +410,10 @@ header .title-row .date-year p:first-of-type {
 .title-row {
     display: flex;
     justify-content: space-between;
+}
+
+.conference .title-row, .publication .title-row, .senat-meeting .title-row, .mediatecy .title-row, .useful-links .title-row {
+    align-items: center;
 }
 
 .btn {
@@ -611,7 +623,9 @@ header .title-row .date-year p:first-of-type {
     margin: 0 5px;
     background: white;
     flex: 0 0 300px;
-    box-shadow: 0 0 30px rgba(0,0,0,.12);
+    box-shadow: 0 0 30px rgba(185, 119, 119, 0.12);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 63%);
+    background: rgb(0,0,0);
 }
 
 .caru-img img {
@@ -698,13 +712,13 @@ footer {
     background: #176aa5;
 }
 
-footer .container {
+footer .container1 {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
 }
 
-footer > .container > .footer-details {
+footer > .container1 > .footer-details {
     width: 23.3%;
 }
 
@@ -814,12 +828,12 @@ button.active {
 }
 
 @media only screen and (max-width: 1700px) {
-    header .container .caru-btn-div {
+    header .container1 .caru-btn-div {
         margin-bottom: 0;
     }
 }
 @media only screen and (min-width: 1441px) {
-    .container {
+    .container1 {
         width: 75%;
     }
     .shaded {
@@ -828,10 +842,7 @@ button.active {
 }
 
 @media only screen and (max-width: 1440px) {
-    .header-content {
-        margin-top: 0;
-    }
-    .container {
+    .container1 {
         max-width: 90%;
     }
     .shaded {
@@ -840,10 +851,7 @@ button.active {
 }
 
 @media only screen and (min-width: 1224px) {
-    header .owl-carousel .owl-item img {
-        display: block;
-        width: 55%;
-    }
+    
 }
 
 
@@ -852,7 +860,7 @@ button.active {
         height: auto;
         background: #176aa5;
     }
-    header nav.container {
+    header nav.container1 {
         width: 100%;
         max-width: 100%;
         padding: 30px 20px 0 20px;
@@ -860,7 +868,7 @@ button.active {
     .header-content {
         margin-top: 0px;
     }
-    header .container .caru-btn-div {
+    header .container1 .caru-btn-div {
         margin-bottom: 0;
         position: relative;
         margin-top: 20px;
@@ -986,14 +994,14 @@ button.active {
     header .owl-dot {
         border: 1px white solid;
     }
-    .container { 
+    .container1 { 
         max-width: 850px;
     }
     .header-carusel .header-content {
         margin: auto;
         text-align: center;
     }
-    header .container .caru-btn-div {
+    header .container1 .caru-btn-div {
         margin-bottom: 0;
         justify-content: center;
     }
@@ -1038,13 +1046,6 @@ button.active {
     }
     .senat-meeting p.card-context.shrift-14 {
         line-height: 1.4;
-    }
-    footer .container {
-        display: block;
-    }
-    footer > .container > .footer-details {
-        width: 100%;
-        text-align: center;
     }
     .footer-details * {
         margin: auto;
@@ -1097,6 +1098,17 @@ button.active {
 
 @media only screen and (max-width: 860px) {
     
+    footer .container1 {
+        display: block;
+    }
+    footer > .container1 > .footer-details {
+        width: 100%;
+        text-align: center;
+    }
+    header .owl-carousel .owl-item img {
+        display: block;
+        width: 55%;
+    }
     .owl-carousel .owl-item img.head-caru-img {
         width: calc(100%/1.2);
         margin: auto;
@@ -1104,7 +1116,7 @@ button.active {
     main > div {
         margin-bottom: 50px;
     }
-    .container {
+    .container1 {
         max-width: 700px;
     }
     .header-content {
@@ -1190,7 +1202,7 @@ button.active {
 }
 
 @media only screen and (max-width: 500px) {
-    .container {
+    .container1 {
         max-width: auto;
     }
     .owl-dot {
@@ -1256,7 +1268,7 @@ button.active {
 }
 
 @media only screen and (max-width: 320px) {
-    .container {
+    .container1 {
         width: auto;
     }
     .card3-div {
