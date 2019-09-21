@@ -624,15 +624,44 @@ header .title-row .date-year p:first-of-type {
     background: white;
     flex: 0 0 300px;
     box-shadow: 0 0 30px rgba(185, 119, 119, 0.12);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 63%);
-    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) -15%, rgba(0,0,0,0) 90%);
+}
+
+.caru-img * {
+    color: white;
+    font-family: SuisseRegular
+}
+
+.caru-img .mediateka-img-data {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    margin-top: 70px;
+}
+
+.caru-img .mediateka-img-data svg {
+    width: 25px;
+    height: 20px;
+}
+
+.caru-img .mediateka-img-data p {
+    margin-left: 5px;
+}
+
+.caru-img .shrift-14 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 25px 25px 25px;
 }
 
 .caru-img img {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
 }
 
 .caru-circles {
